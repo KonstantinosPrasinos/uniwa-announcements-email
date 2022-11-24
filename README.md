@@ -1,0 +1,1 @@
+# uniwa-announcements-email
