@@ -1,0 +1,34 @@
+{
+  "name": "uniwa-announcements-email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KonstantinosPrasinos/uniwa-announcements-email.git"
+  },
+  "keywords": [
+    "uniwa",
+    "node",
+    "nodejs",
+    "email",
+    "nodemailer",
+    "backend"
+  ],
+  "author": "Konstantinos Prasinos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KonstantinosPrasinos/uniwa-announcements-email/issues"
+  },
+  "homepage": "https://github.com/KonstantinosPrasinos/uniwa-announcements-email#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0",
+    "xml2js": "^0.4.23"
+  }
+}
