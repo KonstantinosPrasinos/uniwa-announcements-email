@@ -43,7 +43,7 @@ for child in items:
         if dateTimestamp > latestAnnouncementDate:
             latestAnnouncementDate = dateTimestamp
 
-# Ff no new announcements quit the script
+# If no new announcements quit the script
 if len(newAnnouncements) == 0:
     quit()
 
@@ -52,7 +52,7 @@ f = open("latestAnnouncementDate.txt", "w")
 f.write(str(latestAnnouncementDate))
 f.close()
 
-# Get email list from database
+# Get email list from database, to change the type of database change the two lines below and assign the list of emails to the emailList variable
 Supabase: Client = create_client(databaseUrl, databaseKey)
 emailList = Supabase.table("emails").select("*").execute().data
 
@@ -75,7 +75,7 @@ def sendEmails():
     context = ssl.create_default_context()
 
     # Send the email
-    with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+    with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server: # change this to change the email provider
         server.login(senderEmail, senderPassword)
         server.sendmail(senderEmail, list(emailListProper), message.encode("utf-8"))
         server.quit()
